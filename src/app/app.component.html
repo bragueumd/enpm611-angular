@@ -1,4 +1,25 @@
-<hello name="{{ name }}"></hello>
+<helloComponent name="{{ name }}"></helloComponent>
 <p>
   Start editing to see some magic happen :)
 </p>
+
+<input [(ngModel)]="name"><!-- (ngModel)="name" notation means that the value of the input component should be the value of the variable name. The value of the input field is also propagated to the variable name -> bi-directional binding
+
+as a result, changes to this field will be propagated as the new value of "name"
+-->
+<div>
+<button (click)="sayClicked()">Say Clicked</button>
+</div>
+<!-- this section then defines a button which when clicked executes the sayClicked() method defined in the app component ts -->
+
+<dateComponent date="{{ date }}"></dateComponent>
+
+<div>
+<button (click)="decreaseYear()">Decrease Year</button>
+</div>
+<div>
+<button (click)="increaseYear()">Increase Year</button>
+</div>
+<div>
+<button (click)="resetYear()">Reset Year</button>
+</div>
